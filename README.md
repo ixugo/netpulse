@@ -243,8 +243,6 @@ This project is open sourced under the MIT license - see [LICENSE](LICENSE) file
 
 ## 🔗 Related Links
 
-- [GitHub Repository](https://github.com/ixugo/netpulse)
-- [Go Module Proxy](https://pkg.go.dev/github.com/ixugo/netpulse)
 - [goddd](https://github.com/ixugo/goddd)
 - [nsqite](https://github.com/ixugo/nsqite)
 

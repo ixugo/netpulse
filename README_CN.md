@@ -4,7 +4,9 @@
 
 🚀 Go IP 信息获取库，具备智能故障转移和多服务商支持
 
-## 🌟 项目简介
+高德地图用户可以看这个库 [github.com/ixugo/amap](https://github.com/ixugo/amap)
+
+## 项目简介
 
 NetPulse 是一个轻量级、高效的 Go 语言库，专为获取和解析 IP 地址信息而设计。通过请求第三方 API 服务来获取这些信息，项目提供了两个核心模块：
 
@@ -24,7 +26,7 @@ NetPulse 是一个轻量级、高效的 Go 语言库，专为获取和解析 IP 
 - 支持自定义缓存实现
 - 自动处理缓存命中和过期逻辑
 
-## 📦 安装
+## 安装
 
 ```bash
 go get github.com/ixugo/netpulse
@@ -103,8 +105,8 @@ engine := geoip.New(geoip.Chinese)
 ```
 
 **智能故障转移机制：**
-- 🔄 自动切换服务商：当一个服务商超时或返回错误时，自动尝试下一个
-- 🏆 最佳选择：返回第一个成功的结果，确保最快响应
+- 自动切换服务商：当一个服务商超时或返回错误时，自动尝试下一个
+- 最佳选择：返回第一个成功的结果，确保最快响应
 
 ### 自定义服务商
 
@@ -150,7 +152,7 @@ func main() {
 - `NewIPapi()` - ipapi.com
 - `NewIPwho()` - ipwho.io
 
-## ⚙️ 高级用法
+## 高级用法
 
 ### 自定义配置
 
@@ -227,7 +229,7 @@ type Info struct {
 ### 中文服务商
 - **whois.pconline.com.cn**
 
-## 🤝 贡献指南
+## 贡献指南
 
 欢迎提交 Issue 和 Pull Request！在贡献代码前，请确保：
 
@@ -236,16 +238,15 @@ type Info struct {
 3. 更新相关文档
 4. 遵循项目的代码风格
 
-## 📄 开源协议
+## 开源协议
 
 本项目采用 MIT 协议开源 - 详见 [LICENSE](LICENSE) 文件
 
-## 🔗 相关链接
+## 相关链接
 
-- [GitHub 仓库](https://github.com/ixugo/netpulse)
-- [Go 模块代理](https://pkg.go.dev/github.com/ixugo/netpulse)
-- [goddd](https://github.com/ixugo/goddd)
-- [nsqite](https://github.com/ixugo/nsqite)
+- [goddd 模板](https://github.com/ixugo/goddd)
+- [nsqite 事务消息队列](https://github.com/ixugo/nsqite)
+- [amap 高德地图 API](https://github.com/ixugo/amap)
 
 ---
 

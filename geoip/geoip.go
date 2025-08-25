@@ -97,8 +97,8 @@ type Info struct {
 	Address    string // Address (e.g., "Hubei Province Jingmen City China Unicom")
 }
 
-func request(ctx context.Context, link, ip string, out any, wrapBody WrapBodyHandler) error {
-	req, _ := http.NewRequestWithContext(ctx, http.MethodGet, link+ip, nil)
+func request(ctx context.Context, link string, out any, wrapBody WrapBodyHandler) error {
+	req, _ := http.NewRequestWithContext(ctx, http.MethodGet, link, nil)
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		return err

@@ -65,7 +65,7 @@ func NewIPapi() IPer {
 func (i *IPapi) Lookup(ctx context.Context, ip string) (*Info, error) {
 	const link = "http://ip-api.com/json/"
 	var out ipapiInfo
-	err := request(ctx, link, ip, &out, nil)
+	err := request(ctx, link+ip, &out, nil)
 	if err != nil {
 		return nil, err
 	}

@@ -77,7 +77,7 @@ func NewIfconfigco() IPer {
 func (i *Ifconfigco) Lookup(ctx context.Context, ip string) (*Info, error) {
 	const link = "https://ifconfig.co/json?ip="
 	var out ifconfigcoInfo
-	err := request(ctx, link, ip, &out, nil)
+	err := request(ctx, link+ip, &out, nil)
 	if err != nil {
 		return nil, err
 	}

@@ -118,7 +118,7 @@ func NewIPwho() IPer {
 func (i *IPwho) Lookup(ctx context.Context, ip string) (*Info, error) {
 	const link = "http://ipwho.is/"
 	var out ipwhoInfo
-	err := request(ctx, link, ip, &out, nil)
+	err := request(ctx, link+ip, &out, nil)
 	if err != nil {
 		return nil, err
 	}

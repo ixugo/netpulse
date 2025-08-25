@@ -78,6 +78,6 @@ func NewFreeIPAPI() IPer {
 func (f *FreeIPAPI) Lookup(ctx context.Context, ip string) (*Info, error) {
 	const link = "https://free.freeipapi.com/api/json/"
 	var out freeIPapiInfo
-	err := request(ctx, link, ip, &out, nil)
+	err := request(ctx, link+ip, &out, nil)
 	return out.toInfo(), err
 }

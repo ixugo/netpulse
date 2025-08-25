@@ -63,7 +63,7 @@ func NewWhoisPconline() IPer {
 func (w *whoisPconline) Lookup(ctx context.Context, ip string) (*Info, error) {
 	const link = `http://whois.pconline.com.cn/ipJson.jsp?json=true&ip=`
 	var out whoisPconlineInfo
-	err := request(ctx, link, ip, &out, w.wrapBody)
+	err := request(ctx, link+ip, &out, w.wrapBody)
 	if err != nil {
 		return nil, err
 	}

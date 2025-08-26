@@ -8,6 +8,7 @@ import (
 	"io"
 	"net"
 	"net/http"
+	"sync/atomic"
 	"time"
 )
 
@@ -34,6 +35,20 @@ type Engine struct {
 	language Language
 	handlers []IPer
 	cache    Cacher
+}
+
+var defaultEngine atomic.Pointer[Engine]
+
+func SetDefault(e *Engine) {
+	defaultEngine.Store(e)
+}
+
+func init() {
+	SetDefault(New(Chinese))
+}
+
+func Lookup(ctx context.Context, ip string) (*Info, error) {
+	return defaultEngine.Load().Lookup(ctx, ip)
 }
 
 func New(language Language, opts ...Option) *Engine {
